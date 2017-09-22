@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: ac.soton.eventb.emf.containment;singleton:=true
+Bundle-Version: 0.0.1.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %Bundle-Vendor
+Export-Package: ac.soton.eventb.emf.containment,
+ ac.soton.eventb.emf.containment.impl,
+ ac.soton.eventb.emf.containment.util
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eventb.emf.core;bundle-version="4.2.1";visibility:=reexport
+Bundle-ActivationPolicy: lazy
