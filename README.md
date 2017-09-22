@@ -1,2 +1,2 @@
 # EMF_Containment
-EMF Support for containment mechanism
+This feature provides EMF support for containment mechanism for Event-B.
