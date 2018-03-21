@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2017 University of Southampton.&#xD;&#xD;All rights reserved. This program and the accompanying materials  are made&#xD;available under the terms of the Eclipse Public License v1.0 which accompanies this &#xD;distribution, and is available at http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;"
+    modelDirectory="/ac.soton.eventb.emf.containment/src" modelPluginID="ac.soton.eventb.emf.containment"
+    templateDirectory="/org.eventb.emf.core/templates" dynamicTemplates="true" modelName="Containment"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    containmentProxies="true" complianceLevel="8.0" copyrightFields="false" language=""
+    usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eventb.emf.core/model/eventbcore.genmodel#//core"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>containment.ecore</foreignModel>
+  <genPackages prefix="Containment" basePackage="ac.soton.eventb.emf" disposableProviderFactory="true"
+      extensibleProviderFactory="true" childCreationExtenders="true" ecorePackage="containment.ecore#/">
+    <genClasses ecoreClass="containment.ecore#//ContainsExtension">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference containment.ecore#//ContainsExtension/extension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute containment.ecore#//ContainsExtension/names"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
