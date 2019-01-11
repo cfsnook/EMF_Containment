@@ -19,3 +19,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eventb.emf.core.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: ac.soton.eventb.emf.containment.edit
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
