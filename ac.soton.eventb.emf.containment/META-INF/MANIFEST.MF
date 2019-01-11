@@ -15,3 +15,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eventb.emf.core;bundle-version="[5.0.0,6.0.0)";visibility:=reexport,
  ac.soton.eventb.emf.diagrams;bundle-version="[4.0.0,5.0.0)";visibility:=reexport
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: ac.soton.eventb.emf.containment
