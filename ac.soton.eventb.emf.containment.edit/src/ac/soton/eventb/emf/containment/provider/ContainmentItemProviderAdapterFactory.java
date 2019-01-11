@@ -109,26 +109,26 @@ public class ContainmentItemProviderAdapterFactory extends ContainmentAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ac.soton.eventb.emf.containment.ContainsExtension} instances.
+	 * This keeps track of the one adapter used for all {@link ac.soton.eventb.emf.containment.Containment} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ContainsExtensionItemProvider containsExtensionItemProvider;
+	protected ContainmentItemProvider containmentItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ac.soton.eventb.emf.containment.ContainsExtension}.
+	 * This creates an adapter for a {@link ac.soton.eventb.emf.containment.Containment}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createContainsExtensionAdapter() {
-		if (containsExtensionItemProvider == null) {
-			containsExtensionItemProvider = new ContainsExtensionItemProvider(this);
+	public Adapter createContainmentAdapter() {
+		if (containmentItemProvider == null) {
+			containmentItemProvider = new ContainmentItemProvider(this);
 		}
 
-		return containsExtensionItemProvider;
+		return containmentItemProvider;
 	}
 
 	/**
@@ -257,7 +257,7 @@ public class ContainmentItemProviderAdapterFactory extends ContainmentAdapterFac
 	 * @generated
 	 */
 	public void dispose() {
-		if (containsExtensionItemProvider != null) containsExtensionItemProvider.dispose();
+		if (containmentItemProvider != null) containmentItemProvider.dispose();
 	}
 
 	/**
@@ -310,12 +310,12 @@ public class ContainmentItemProviderAdapterFactory extends ContainmentAdapterFac
 			
 			EAnnotation annotation = null;
 				
-				annotation = ContainmentPackage.Literals.CONTAINS_EXTENSION.getEAnnotation("org.eventb.emf.core.extendedMetaClasses");
+				annotation = ContainmentPackage.Literals.CONTAINMENT.getEAnnotation("org.eventb.emf.core.extendedMetaClasses");
 				if (annotation == null  || annotation.getReferences().contains(object.eClass()))
 					newChildDescriptors.add
 						(createChildParameter
 							(CorePackage.Literals.EVENT_BELEMENT__EXTENSIONS,
-							 ContainmentFactory.eINSTANCE.createContainsExtension()));
+							 ContainmentFactory.eINSTANCE.createContainment()));
 
 				return null;
 			}
@@ -330,12 +330,12 @@ public class ContainmentItemProviderAdapterFactory extends ContainmentAdapterFac
 			
 			EAnnotation annotation = null;
 				
-				annotation = ContainmentPackage.Literals.CONTAINS_EXTENSION.getEAnnotation("org.eventb.emf.core.extendedMetaClasses");
+				annotation = ContainmentPackage.Literals.CONTAINMENT.getEAnnotation("org.eventb.emf.core.extendedMetaClasses");
 				if (annotation == null  || annotation.getReferences().contains(object.eClass()))
 					newChildDescriptors.add
 						(createChildParameter
 							(CorePackage.Literals.ANNOTATION__CONTENTS,
-							 ContainmentFactory.eINSTANCE.createContainsExtension()));
+							 ContainmentFactory.eINSTANCE.createContainment()));
 
 				return null;
 			}

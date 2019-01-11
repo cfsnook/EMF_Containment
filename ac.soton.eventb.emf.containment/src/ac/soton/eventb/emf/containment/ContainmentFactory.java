@@ -30,13 +30,13 @@ public interface ContainmentFactory extends EFactory {
 	ContainmentFactory eINSTANCE = ac.soton.eventb.emf.containment.impl.ContainmentFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Contains Extension</em>'.
+	 * Returns a new object of class '<em>Containment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Contains Extension</em>'.
+	 * @return a new object of class '<em>Containment</em>'.
 	 * @generated
 	 */
-	ContainsExtension createContainsExtension();
+	Containment createContainment();
 
 	/**
 	 * Returns the package supported by this factory.

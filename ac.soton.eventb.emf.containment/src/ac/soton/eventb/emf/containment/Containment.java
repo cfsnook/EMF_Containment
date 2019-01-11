@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2017 University of Southampton.
+ * Copyright (c) 2017-2019 University of Southampton.
  * 
  * All rights reserved. This program and the accompanying materials  are made
  * available under the terms of the Eclipse Public License v1.0 which accompanies this 
@@ -11,26 +11,27 @@
 package ac.soton.eventb.emf.containment;
 
 import ac.soton.eventb.emf.diagrams.Diagram;
+
 import org.eventb.emf.core.AbstractExtension;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Contains Extension</b></em>'.
+ * A representation of the model object '<em><b>Containment</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link ac.soton.eventb.emf.containment.ContainsExtension#getName <em>Name</em>}</li>
- *   <li>{@link ac.soton.eventb.emf.containment.ContainsExtension#getExtension <em>Extension</em>}</li>
+ *   <li>{@link ac.soton.eventb.emf.containment.Containment#getName <em>Name</em>}</li>
+ *   <li>{@link ac.soton.eventb.emf.containment.Containment#getExtension <em>Extension</em>}</li>
  * </ul>
  * </p>
  *
- * @see ac.soton.eventb.emf.containment.ContainmentPackage#getContainsExtension()
+ * @see ac.soton.eventb.emf.containment.ContainmentPackage#getContainment()
  * @model
  * @generated
  */
-public interface ContainsExtension extends AbstractExtension {
+public interface Containment extends AbstractExtension {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * The default value is <code>""</code>.
@@ -42,14 +43,14 @@ public interface ContainsExtension extends AbstractExtension {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see ac.soton.eventb.emf.containment.ContainmentPackage#getContainsExtension_Name()
+	 * @see ac.soton.eventb.emf.containment.ContainmentPackage#getContainment_Name()
 	 * @model default="" required="true"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link ac.soton.eventb.emf.containment.ContainsExtension#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link ac.soton.eventb.emf.containment.Containment#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -68,14 +69,14 @@ public interface ContainsExtension extends AbstractExtension {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Extension</em>' reference.
 	 * @see #setExtension(Diagram)
-	 * @see ac.soton.eventb.emf.containment.ContainmentPackage#getContainsExtension_Extension()
+	 * @see ac.soton.eventb.emf.containment.ContainmentPackage#getContainment_Extension()
 	 * @model
 	 * @generated
 	 */
 	Diagram getExtension();
 
 	/**
-	 * Sets the value of the '{@link ac.soton.eventb.emf.containment.ContainsExtension#getExtension <em>Extension</em>}' reference.
+	 * Sets the value of the '{@link ac.soton.eventb.emf.containment.Containment#getExtension <em>Extension</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Extension</em>' reference.
@@ -84,4 +85,4 @@ public interface ContainsExtension extends AbstractExtension {
 	 */
 	void setExtension(Diagram value);
 
-} // ContainsExtension
+} // Containment
