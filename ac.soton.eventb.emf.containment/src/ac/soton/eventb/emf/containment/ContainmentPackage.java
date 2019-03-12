@@ -66,14 +66,14 @@ public interface ContainmentPackage extends EPackage {
 	ContainmentPackage eINSTANCE = ac.soton.eventb.emf.containment.impl.ContainmentPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link ac.soton.eventb.emf.containment.impl.ContainsExtensionImpl <em>Contains Extension</em>}' class.
+	 * The meta object id for the '{@link ac.soton.eventb.emf.containment.impl.ContainmentImpl <em>Containment</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ac.soton.eventb.emf.containment.impl.ContainsExtensionImpl
-	 * @see ac.soton.eventb.emf.containment.impl.ContainmentPackageImpl#getContainsExtension()
+	 * @see ac.soton.eventb.emf.containment.impl.ContainmentImpl
+	 * @see ac.soton.eventb.emf.containment.impl.ContainmentPackageImpl#getContainment()
 	 * @generated
 	 */
-	int CONTAINS_EXTENSION = 0;
+	int CONTAINMENT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
@@ -82,7 +82,7 @@ public interface ContainmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS_EXTENSION__ANNOTATIONS = CorePackage.ABSTRACT_EXTENSION__ANNOTATIONS;
+	int CONTAINMENT__ANNOTATIONS = CorePackage.ABSTRACT_EXTENSION__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
@@ -91,7 +91,7 @@ public interface ContainmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS_EXTENSION__EXTENSIONS = CorePackage.ABSTRACT_EXTENSION__EXTENSIONS;
+	int CONTAINMENT__EXTENSIONS = CorePackage.ABSTRACT_EXTENSION__EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' map.
@@ -100,7 +100,7 @@ public interface ContainmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS_EXTENSION__ATTRIBUTES = CorePackage.ABSTRACT_EXTENSION__ATTRIBUTES;
+	int CONTAINMENT__ATTRIBUTES = CorePackage.ABSTRACT_EXTENSION__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Reference</b></em>' attribute.
@@ -109,7 +109,7 @@ public interface ContainmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS_EXTENSION__REFERENCE = CorePackage.ABSTRACT_EXTENSION__REFERENCE;
+	int CONTAINMENT__REFERENCE = CorePackage.ABSTRACT_EXTENSION__REFERENCE;
 
 	/**
 	 * The feature id for the '<em><b>Generated</b></em>' attribute.
@@ -118,7 +118,7 @@ public interface ContainmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS_EXTENSION__GENERATED = CorePackage.ABSTRACT_EXTENSION__GENERATED;
+	int CONTAINMENT__GENERATED = CorePackage.ABSTRACT_EXTENSION__GENERATED;
 
 	/**
 	 * The feature id for the '<em><b>Local Generated</b></em>' attribute.
@@ -127,7 +127,7 @@ public interface ContainmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS_EXTENSION__LOCAL_GENERATED = CorePackage.ABSTRACT_EXTENSION__LOCAL_GENERATED;
+	int CONTAINMENT__LOCAL_GENERATED = CorePackage.ABSTRACT_EXTENSION__LOCAL_GENERATED;
 
 	/**
 	 * The feature id for the '<em><b>Internal Id</b></em>' attribute.
@@ -136,7 +136,7 @@ public interface ContainmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS_EXTENSION__INTERNAL_ID = CorePackage.ABSTRACT_EXTENSION__INTERNAL_ID;
+	int CONTAINMENT__INTERNAL_ID = CorePackage.ABSTRACT_EXTENSION__INTERNAL_ID;
 
 	/**
 	 * The feature id for the '<em><b>Extension Id</b></em>' attribute.
@@ -145,7 +145,16 @@ public interface ContainmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS_EXTENSION__EXTENSION_ID = CorePackage.ABSTRACT_EXTENSION__EXTENSION_ID;
+	int CONTAINMENT__EXTENSION_ID = CorePackage.ABSTRACT_EXTENSION__EXTENSION_ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINMENT__NAME = CorePackage.ABSTRACT_EXTENSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' reference.
@@ -154,58 +163,49 @@ public interface ContainmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS_EXTENSION__EXTENSION = CorePackage.ABSTRACT_EXTENSION_FEATURE_COUNT + 0;
+	int CONTAINMENT__EXTENSION = CorePackage.ABSTRACT_EXTENSION_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Names</b></em>' attribute list.
+	 * The number of structural features of the '<em>Containment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS_EXTENSION__NAMES = CorePackage.ABSTRACT_EXTENSION_FEATURE_COUNT + 1;
+	int CONTAINMENT_FEATURE_COUNT = CorePackage.ABSTRACT_EXTENSION_FEATURE_COUNT + 2;
+
 
 	/**
-	 * The number of structural features of the '<em>Contains Extension</em>' class.
+	 * Returns the meta object for class '{@link ac.soton.eventb.emf.containment.Containment <em>Containment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Containment</em>'.
+	 * @see ac.soton.eventb.emf.containment.Containment
 	 * @generated
-	 * @ordered
 	 */
-	int CONTAINS_EXTENSION_FEATURE_COUNT = CorePackage.ABSTRACT_EXTENSION_FEATURE_COUNT + 2;
-
+	EClass getContainment();
 
 	/**
-	 * Returns the meta object for class '{@link ac.soton.eventb.emf.containment.ContainsExtension <em>Contains Extension</em>}'.
+	 * Returns the meta object for the attribute '{@link ac.soton.eventb.emf.containment.Containment#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Contains Extension</em>'.
-	 * @see ac.soton.eventb.emf.containment.ContainsExtension
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see ac.soton.eventb.emf.containment.Containment#getName()
+	 * @see #getContainment()
 	 * @generated
 	 */
-	EClass getContainsExtension();
+	EAttribute getContainment_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link ac.soton.eventb.emf.containment.ContainsExtension#getExtension <em>Extension</em>}'.
+	 * Returns the meta object for the reference '{@link ac.soton.eventb.emf.containment.Containment#getExtension <em>Extension</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Extension</em>'.
-	 * @see ac.soton.eventb.emf.containment.ContainsExtension#getExtension()
-	 * @see #getContainsExtension()
+	 * @see ac.soton.eventb.emf.containment.Containment#getExtension()
+	 * @see #getContainment()
 	 * @generated
 	 */
-	EReference getContainsExtension_Extension();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link ac.soton.eventb.emf.containment.ContainsExtension#getNames <em>Names</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Names</em>'.
-	 * @see ac.soton.eventb.emf.containment.ContainsExtension#getNames()
-	 * @see #getContainsExtension()
-	 * @generated
-	 */
-	EAttribute getContainsExtension_Names();
+	EReference getContainment_Extension();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -230,14 +230,22 @@ public interface ContainmentPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link ac.soton.eventb.emf.containment.impl.ContainsExtensionImpl <em>Contains Extension</em>}' class.
+		 * The meta object literal for the '{@link ac.soton.eventb.emf.containment.impl.ContainmentImpl <em>Containment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ac.soton.eventb.emf.containment.impl.ContainsExtensionImpl
-		 * @see ac.soton.eventb.emf.containment.impl.ContainmentPackageImpl#getContainsExtension()
+		 * @see ac.soton.eventb.emf.containment.impl.ContainmentImpl
+		 * @see ac.soton.eventb.emf.containment.impl.ContainmentPackageImpl#getContainment()
 		 * @generated
 		 */
-		EClass CONTAINS_EXTENSION = eINSTANCE.getContainsExtension();
+		EClass CONTAINMENT = eINSTANCE.getContainment();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTAINMENT__NAME = eINSTANCE.getContainment_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Extension</b></em>' reference feature.
@@ -245,15 +253,7 @@ public interface ContainmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTAINS_EXTENSION__EXTENSION = eINSTANCE.getContainsExtension_Extension();
-
-		/**
-		 * The meta object literal for the '<em><b>Names</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONTAINS_EXTENSION__NAMES = eINSTANCE.getContainsExtension_Names();
+		EReference CONTAINMENT__EXTENSION = eINSTANCE.getContainment_Extension();
 
 	}
 

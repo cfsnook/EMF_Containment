@@ -39,7 +39,7 @@ public class ContainmentTests extends TestSuite {
 	 */
 	public static Test suite() {
 		TestSuite suite = new ContainmentTests("containment Tests");
-		suite.addTestSuite(ContainsExtensionTest.class);
+		suite.addTestSuite(ContainmentTest.class);
 		return suite;
 	}
 

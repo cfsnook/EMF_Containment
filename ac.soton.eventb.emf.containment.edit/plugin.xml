@@ -28,7 +28,7 @@
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
-            uri="http://emf.eventb.org/models/core/machine/2014"
+            uri="http://emf.eventb.org/models/core/2014"
             class="ac.soton.eventb.emf.containment.provider.ContainmentItemProviderAdapterFactory$CoreChildCreationExtender"/>
    </extension>
 

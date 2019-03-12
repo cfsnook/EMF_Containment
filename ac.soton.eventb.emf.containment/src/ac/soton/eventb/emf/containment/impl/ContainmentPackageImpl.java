@@ -10,10 +10,10 @@
  */
 package ac.soton.eventb.emf.containment.impl;
 
+import ac.soton.eventb.emf.containment.Containment;
 import ac.soton.eventb.emf.containment.ContainmentFactory;
 import ac.soton.eventb.emf.containment.ContainmentPackage;
-
-import ac.soton.eventb.emf.containment.ContainsExtension;
+import ac.soton.eventb.emf.diagrams.DiagramsPackage;
 import org.eclipse.emf.common.util.URI;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eventb.emf.core.CorePackage;
@@ -37,7 +38,7 @@ public class ContainmentPackageImpl extends EPackageImpl implements ContainmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass containsExtensionEClass = null;
+	private EClass containmentEClass = null;
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
@@ -85,6 +86,8 @@ public class ContainmentPackageImpl extends EPackageImpl implements ContainmentP
 		isInited = true;
 
 		// Initialize simple dependencies
+		DiagramsPackage.eINSTANCE.eClass();
+		EcorePackage.eINSTANCE.eClass();
 		CorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -107,8 +110,8 @@ public class ContainmentPackageImpl extends EPackageImpl implements ContainmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getContainsExtension() {
-		return containsExtensionEClass;
+	public EClass getContainment() {
+		return containmentEClass;
 	}
 
 	/**
@@ -116,8 +119,8 @@ public class ContainmentPackageImpl extends EPackageImpl implements ContainmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContainsExtension_Extension() {
-		return (EReference)containsExtensionEClass.getEStructuralFeatures().get(0);
+	public EAttribute getContainment_Name() {
+		return (EAttribute)containmentEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -125,8 +128,8 @@ public class ContainmentPackageImpl extends EPackageImpl implements ContainmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getContainsExtension_Names() {
-		return (EAttribute)containsExtensionEClass.getEStructuralFeatures().get(1);
+	public EReference getContainment_Extension() {
+		return (EReference)containmentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -157,9 +160,9 @@ public class ContainmentPackageImpl extends EPackageImpl implements ContainmentP
 		isCreated = true;
 
 		// Create classes and their features
-		containsExtensionEClass = createEClass(CONTAINS_EXTENSION);
-		createEReference(containsExtensionEClass, CONTAINS_EXTENSION__EXTENSION);
-		createEAttribute(containsExtensionEClass, CONTAINS_EXTENSION__NAMES);
+		containmentEClass = createEClass(CONTAINMENT);
+		createEAttribute(containmentEClass, CONTAINMENT__NAME);
+		createEReference(containmentEClass, CONTAINMENT__EXTENSION);
 	}
 
 	/**
@@ -187,18 +190,19 @@ public class ContainmentPackageImpl extends EPackageImpl implements ContainmentP
 
 		// Obtain other dependent packages
 		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		DiagramsPackage theDiagramsPackage = (DiagramsPackage)EPackage.Registry.INSTANCE.getEPackage(DiagramsPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		containsExtensionEClass.getESuperTypes().add(theCorePackage.getAbstractExtension());
+		containmentEClass.getESuperTypes().add(theCorePackage.getAbstractExtension());
 
 		// Initialize classes and features; add operations and parameters
-		initEClass(containsExtensionEClass, ContainsExtension.class, "ContainsExtension", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getContainsExtension_Extension(), theCorePackage.getAbstractExtension(), null, "extension", null, 0, 1, ContainsExtension.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getContainsExtension_Names(), ecorePackage.getEString(), "names", "", 0, -1, ContainsExtension.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(containmentEClass, Containment.class, "Containment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getContainment_Name(), ecorePackage.getEString(), "name", "", 1, 1, Containment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContainment_Extension(), theDiagramsPackage.getDiagram(), null, "extension", null, 0, 1, Containment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -217,7 +221,7 @@ public class ContainmentPackageImpl extends EPackageImpl implements ContainmentP
 	protected void createOrgAnnotations() {
 		String source = "org.eventb.emf.core.extendedMetaClasses";		
 		addAnnotation
-		  (containsExtensionEClass, 
+		  (containmentEClass, 
 		   source, 
 		   new String[] {
 		   },

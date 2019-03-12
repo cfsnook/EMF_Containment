@@ -80,8 +80,8 @@ public class ContainmentAdapterFactory extends AdapterFactoryImpl {
 	protected ContainmentSwitch<Adapter> modelSwitch =
 		new ContainmentSwitch<Adapter>() {
 			@Override
-			public Adapter caseContainsExtension(ContainsExtension object) {
-				return createContainsExtensionAdapter();
+			public Adapter caseContainment(Containment object) {
+				return createContainmentAdapter();
 			}
 			@Override
 			public Adapter caseEventBObject(EventBObject object) {
@@ -116,16 +116,16 @@ public class ContainmentAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ac.soton.eventb.emf.containment.ContainsExtension <em>Contains Extension</em>}'.
+	 * Creates a new adapter for an object of class '{@link ac.soton.eventb.emf.containment.Containment <em>Containment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ac.soton.eventb.emf.containment.ContainsExtension
+	 * @see ac.soton.eventb.emf.containment.Containment
 	 * @generated
 	 */
-	public Adapter createContainsExtensionAdapter() {
+	public Adapter createContainmentAdapter() {
 		return null;
 	}
 
