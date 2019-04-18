@@ -10,10 +10,9 @@
  */
 package ac.soton.eventb.emf.containment.tests;
 
+import ac.soton.eventb.emf.containment.Containment;
 import ac.soton.eventb.emf.containment.ContainmentFactory;
 import ac.soton.eventb.emf.containment.ContainmentPackage;
-
-import ac.soton.eventb.emf.containment.ContainsExtension;
 import java.io.File;
 import java.io.IOException;
 
@@ -68,7 +67,7 @@ public class ContainmentExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.containment"));
-				ContainsExtension root = ContainmentFactory.eINSTANCE.createContainsExtension();
+				Containment root = ContainmentFactory.eINSTANCE.createContainment();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

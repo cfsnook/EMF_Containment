@@ -64,7 +64,7 @@ public class ContainmentFactoryImpl extends EFactoryImpl implements ContainmentF
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ContainmentPackage.CONTAINS_EXTENSION: return createContainsExtension();
+			case ContainmentPackage.CONTAINMENT: return createContainment();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -75,9 +75,9 @@ public class ContainmentFactoryImpl extends EFactoryImpl implements ContainmentF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContainsExtension createContainsExtension() {
-		ContainsExtensionImpl containsExtension = new ContainsExtensionImpl();
-		return containsExtension;
+	public Containment createContainment() {
+		ContainmentImpl containment = new ContainmentImpl();
+		return containment;
 	}
 
 	/**

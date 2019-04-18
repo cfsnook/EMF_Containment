@@ -95,12 +95,12 @@ public class ContainmentSwitch<T> {
 	 */
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case ContainmentPackage.CONTAINS_EXTENSION: {
-				ContainsExtension containsExtension = (ContainsExtension)theEObject;
-				T result = caseContainsExtension(containsExtension);
-				if (result == null) result = caseAbstractExtension(containsExtension);
-				if (result == null) result = caseEventBElement(containsExtension);
-				if (result == null) result = caseEventBObject(containsExtension);
+			case ContainmentPackage.CONTAINMENT: {
+				Containment containment = (Containment)theEObject;
+				T result = caseContainment(containment);
+				if (result == null) result = caseAbstractExtension(containment);
+				if (result == null) result = caseEventBElement(containment);
+				if (result == null) result = caseEventBObject(containment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -109,17 +109,17 @@ public class ContainmentSwitch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Contains Extension</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Containment</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Contains Extension</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Containment</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseContainsExtension(ContainsExtension object) {
+	public T caseContainment(Containment object) {
 		return null;
 	}
 

@@ -10,6 +10,8 @@
  */
 package ac.soton.eventb.emf.containment.provider;
 
+import ac.soton.eventb.emf.diagrams.provider.DiagramsEditPlugin;
+
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -50,6 +52,7 @@ public final class ContainmentEditPlugin extends EMFPlugin {
 	public ContainmentEditPlugin() {
 		super
 		  (new ResourceLocator [] {
+		     DiagramsEditPlugin.INSTANCE,
 		     EcoreEditPlugin.INSTANCE,
 		     EventbcoreEditPlugin.INSTANCE,
 		   });
