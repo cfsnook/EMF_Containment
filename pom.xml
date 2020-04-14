@@ -27,7 +27,7 @@
     <module>ac.soton.eventb.emf.containment.edit</module>
     <module>ac.soton.eventb.emf.containment.persistance</module>
     <!-- <module>ac.soton.eventb.emf.containment.tests</module> -->
-    <!-- <module>ac.soton.eventb.emf.containment.feature</module> -->
+    <module>ac.soton.eventb.emf.containment.feature</module>
     <!-- <module>ac.soton.eventb.emf.containment.tests.feature</module> -->
     <!-- <module>ac.soton.eventb.emf.containment.sdk</module> -->
   </modules>
