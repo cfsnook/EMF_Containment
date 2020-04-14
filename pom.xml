@@ -1,0 +1,34 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <!-- REQUIRED: Group ID is the feature ID -->
+  <groupId>ac.soton.eventb.emf.containment</groupId>
+  <!-- Name of this artifact -->
+  <artifactId>root</artifactId>
+  <!-- REQUIRED: Name and description of this this root build -->
+  <name>EMF Containment Root POM</name>
+  <description>Root artifact for EMF Containment</description>
+  <!-- REQUIRED: Version number (using semantic versioning) -->
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <parent>
+    <!-- REQUIRED: Group ID is the feature ID -->
+    <groupId>ac.soton.eventb.emf.containment</groupId>
+    <!-- Name of the release engineering artifact -->
+    <artifactId>releng</artifactId>
+    <!-- REQUIRED: Version number of the release engineering artifact -->
+    <version>0.0.1-SNAPSHOT</version>
+    <!-- REQUIRED: Relative path to the release engineering artifact -->
+    <relativePath>./ac.soton.eventb.emf.containment.releng</relativePath>
+  </parent>
+
+  <modules>
+    <!-- LATER: List of modules in this build -->
+    <module>ac.soton.eventb.emf.containment</module>
+    <module>ac.soton.eventb.emf.containment.edit</module>
+    <module>ac.soton.eventb.emf.containment.persistance</module>
+    <!-- <module>ac.soton.eventb.emf.containment.tests</module> -->
+    <!-- <module>ac.soton.eventb.emf.containment.feature</module> -->
+    <!-- <module>ac.soton.eventb.emf.containment.tests.feature</module> -->
+    <!-- <module>ac.soton.eventb.emf.containment.sdk</module> -->
+  </modules>
+</project>
