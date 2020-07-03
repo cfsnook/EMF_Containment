@@ -2,7 +2,7 @@
 <feature
       id="ac.soton.eventb.emf.containment.feature"
       label="%featureName"
-      version="0.0.1.qualifier"
+      version="0.0.1.release"
       provider-name="%featureVendor"
       license-feature="org.rodinp.licence"
       license-feature-version="1.0.0.release">
@@ -25,7 +25,7 @@
       <import plugin="org.eventb.emf.core" version="5.0.0" match="compatible"/>
       <import plugin="ac.soton.eventb.emf.diagrams" version="4.0.0" match="compatible"/>
       <import plugin="org.eclipse.emf.edit"/>
-      <import plugin="ac.soton.eventb.emf.diagrams.edit"/>
+      <import plugin="ac.soton.eventb.emf.diagrams.edit" version="4.0.0" match="compatible"/>
       <import plugin="org.eclipse.emf.ecore.edit"/>
       <import plugin="org.eventb.emf.core.edit"/>
       <import plugin="org.eventb.emf.persistence" version="3.0.0" match="compatible"/>
