@@ -25,10 +25,10 @@
     <!-- LATER: List of modules in this build -->
     <module>ac.soton.eventb.emf.containment</module>
     <module>ac.soton.eventb.emf.containment.edit</module>
-    <module>ac.soton.eventb.emf.containment.persistance</module>
+    <module>ac.soton.eventb.emf.containment.persistence</module>
     <!-- <module>ac.soton.eventb.emf.containment.tests</module> -->
     <module>ac.soton.eventb.emf.containment.feature</module>
     <!-- <module>ac.soton.eventb.emf.containment.tests.feature</module> -->
-    <!-- <module>ac.soton.eventb.emf.containment.sdk</module> -->
+    <module>ac.soton.eventb.emf.containment.sdk</module>
   </modules>
 </project>
