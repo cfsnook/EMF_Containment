@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eventb.emf.core.CorePackage;
+import org.eventb.emf.core.machine.MachinePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -202,7 +203,7 @@ public class ContainmentPackageImpl extends EPackageImpl implements ContainmentP
 		// Initialize classes and features; add operations and parameters
 		initEClass(containmentEClass, Containment.class, "Containment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getContainment_Name(), ecorePackage.getEString(), "name", "", 1, 1, Containment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContainment_Extension(), theDiagramsPackage.getDiagram(), null, "extension", null, 0, 1, Containment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContainment_Extension(), theDiagramsPackage.getDiagramOwner(), null, "extension", null, 1, 1, Containment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -226,7 +227,7 @@ public class ContainmentPackageImpl extends EPackageImpl implements ContainmentP
 		   new String[] {
 		   },
 		   new URI[] {
-			 URI.createURI(CorePackage.eNS_URI).appendFragment("//machine/Machine")
+			 URI.createURI(MachinePackage.eNS_URI).appendFragment("//machine/Machine")
 		   });
 	}
 

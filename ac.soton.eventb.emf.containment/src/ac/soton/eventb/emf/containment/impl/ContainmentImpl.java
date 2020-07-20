@@ -12,9 +12,7 @@ package ac.soton.eventb.emf.containment.impl;
 
 import ac.soton.eventb.emf.containment.Containment;
 import ac.soton.eventb.emf.containment.ContainmentPackage;
-
-import ac.soton.eventb.emf.diagrams.Diagram;
-
+import ac.soton.eventb.emf.diagrams.DiagramOwner;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -67,7 +65,7 @@ public class ContainmentImpl extends AbstractExtensionImpl implements Containmen
 	 * @generated
 	 * @ordered
 	 */
-	protected Diagram extension;
+	protected DiagramOwner extension;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,10 +112,10 @@ public class ContainmentImpl extends AbstractExtensionImpl implements Containmen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Diagram getExtension() {
+	public DiagramOwner getExtension() {
 		if (extension != null && extension.eIsProxy()) {
 			InternalEObject oldExtension = (InternalEObject)extension;
-			extension = (Diagram)eResolveProxy(oldExtension);
+			extension = (DiagramOwner)eResolveProxy(oldExtension);
 			if (extension != oldExtension) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ContainmentPackage.CONTAINMENT__EXTENSION, oldExtension, extension));
@@ -131,7 +129,7 @@ public class ContainmentImpl extends AbstractExtensionImpl implements Containmen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Diagram basicGetExtension() {
+	public DiagramOwner basicGetExtension() {
 		return extension;
 	}
 
@@ -140,8 +138,8 @@ public class ContainmentImpl extends AbstractExtensionImpl implements Containmen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExtension(Diagram newExtension) {
-		Diagram oldExtension = extension;
+	public void setExtension(DiagramOwner newExtension) {
+		DiagramOwner oldExtension = extension;
 		extension = newExtension;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ContainmentPackage.CONTAINMENT__EXTENSION, oldExtension, extension));
@@ -176,7 +174,7 @@ public class ContainmentImpl extends AbstractExtensionImpl implements Containmen
 				setName((String)newValue);
 				return;
 			case ContainmentPackage.CONTAINMENT__EXTENSION:
-				setExtension((Diagram)newValue);
+				setExtension((DiagramOwner)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -194,7 +192,7 @@ public class ContainmentImpl extends AbstractExtensionImpl implements Containmen
 				setName(NAME_EDEFAULT);
 				return;
 			case ContainmentPackage.CONTAINMENT__EXTENSION:
-				setExtension((Diagram)null);
+				setExtension((DiagramOwner)null);
 				return;
 		}
 		super.eUnset(featureID);
