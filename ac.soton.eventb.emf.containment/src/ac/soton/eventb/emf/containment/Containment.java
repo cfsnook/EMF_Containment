@@ -8,8 +8,8 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  *
- * Contributors:
- *     University of Southampton - initial API and implementation
+ *
+ * $Id$
  *******************************************************************************/
 package ac.soton.eventb.emf.containment;
 

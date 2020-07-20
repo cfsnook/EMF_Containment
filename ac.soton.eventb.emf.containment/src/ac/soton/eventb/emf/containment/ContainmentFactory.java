@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2020 University of Southampton.
+ * Copyright (c) 2017,2020 University of Southampton.
  *
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 2.0
@@ -8,8 +8,8 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  *
- * Contributors:
- *     University of Southampton - initial API and implementation
+ *
+ * $Id$
  *******************************************************************************/
 package ac.soton.eventb.emf.containment;
 
