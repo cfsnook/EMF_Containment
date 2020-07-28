@@ -1,16 +1,18 @@
-/**
- * Copyright (c) 2017 University of Southampton.
- * 
- * All rights reserved. This program and the accompanying materials  are made
- * available under the terms of the Eclipse Public License v1.0 which accompanies this 
- * distribution, and is available at http://www.eclipse.org/legal/epl-v10.html
- * 
+/*******************************************************************************
+ * Copyright (c) 2017,2020 University of Southampton.
+ *
+ * This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License 2.0
+ * which accompanies this distribution, and is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *
  *
  * $Id$
- */
+ *******************************************************************************/
 package ac.soton.eventb.emf.containment;
 
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -148,22 +150,13 @@ public interface ContainmentPackage extends EPackage {
 	int CONTAINMENT__EXTENSION_ID = CorePackage.ABSTRACT_EXTENSION__EXTENSION_ID;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINMENT__NAME = CorePackage.ABSTRACT_EXTENSION_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Extension</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINMENT__EXTENSION = CorePackage.ABSTRACT_EXTENSION_FEATURE_COUNT + 1;
+	int CONTAINMENT__EXTENSION = CorePackage.ABSTRACT_EXTENSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Containment</em>' class.
@@ -172,7 +165,7 @@ public interface ContainmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINMENT_FEATURE_COUNT = CorePackage.ABSTRACT_EXTENSION_FEATURE_COUNT + 2;
+	int CONTAINMENT_FEATURE_COUNT = CorePackage.ABSTRACT_EXTENSION_FEATURE_COUNT + 1;
 
 
 	/**
@@ -184,17 +177,6 @@ public interface ContainmentPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getContainment();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ac.soton.eventb.emf.containment.Containment#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see ac.soton.eventb.emf.containment.Containment#getName()
-	 * @see #getContainment()
-	 * @generated
-	 */
-	EAttribute getContainment_Name();
 
 	/**
 	 * Returns the meta object for the reference '{@link ac.soton.eventb.emf.containment.Containment#getExtension <em>Extension</em>}'.
@@ -238,14 +220,6 @@ public interface ContainmentPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONTAINMENT = eINSTANCE.getContainment();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONTAINMENT__NAME = eINSTANCE.getContainment_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Extension</b></em>' reference feature.

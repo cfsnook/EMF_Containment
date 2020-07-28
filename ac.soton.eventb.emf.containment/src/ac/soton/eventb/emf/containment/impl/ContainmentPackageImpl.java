@@ -1,13 +1,16 @@
-/**
- * Copyright (c) 2017 University of Southampton.
- * 
- * All rights reserved. This program and the accompanying materials  are made
- * available under the terms of the Eclipse Public License v1.0 which accompanies this 
- * distribution, and is available at http://www.eclipse.org/legal/epl-v10.html
- * 
+/*******************************************************************************
+ * Copyright (c) 2017,2020 University of Southampton.
+ *
+ * This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License 2.0
+ * which accompanies this distribution, and is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *
  *
  * $Id$
- */
+ *******************************************************************************/
 package ac.soton.eventb.emf.containment.impl;
 
 import ac.soton.eventb.emf.containment.Containment;
@@ -15,8 +18,6 @@ import ac.soton.eventb.emf.containment.ContainmentFactory;
 import ac.soton.eventb.emf.containment.ContainmentPackage;
 import ac.soton.eventb.emf.diagrams.DiagramsPackage;
 import org.eclipse.emf.common.util.URI;
-
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -25,6 +26,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eventb.emf.core.CorePackage;
+import org.eventb.emf.core.machine.MachinePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -119,17 +121,8 @@ public class ContainmentPackageImpl extends EPackageImpl implements ContainmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getContainment_Name() {
-		return (EAttribute)containmentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getContainment_Extension() {
-		return (EReference)containmentEClass.getEStructuralFeatures().get(1);
+		return (EReference)containmentEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -161,7 +154,6 @@ public class ContainmentPackageImpl extends EPackageImpl implements ContainmentP
 
 		// Create classes and their features
 		containmentEClass = createEClass(CONTAINMENT);
-		createEAttribute(containmentEClass, CONTAINMENT__NAME);
 		createEReference(containmentEClass, CONTAINMENT__EXTENSION);
 	}
 
@@ -201,8 +193,7 @@ public class ContainmentPackageImpl extends EPackageImpl implements ContainmentP
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(containmentEClass, Containment.class, "Containment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getContainment_Name(), ecorePackage.getEString(), "name", "", 1, 1, Containment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContainment_Extension(), theDiagramsPackage.getDiagram(), null, "extension", null, 0, 1, Containment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContainment_Extension(), theDiagramsPackage.getDiagramOwner(), null, "extension", null, 1, 1, Containment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -226,7 +217,7 @@ public class ContainmentPackageImpl extends EPackageImpl implements ContainmentP
 		   new String[] {
 		   },
 		   new URI[] {
-			 URI.createURI(CorePackage.eNS_URI).appendFragment("//machine/Machine")
+			 URI.createURI(MachinePackage.eNS_URI).appendFragment("//machine/Machine")
 		   });
 	}
 

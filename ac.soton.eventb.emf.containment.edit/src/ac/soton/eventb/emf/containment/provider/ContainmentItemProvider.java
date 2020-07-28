@@ -1,13 +1,16 @@
-/**
- * Copyright (c) 2017-2019 University of Southampton.
- * 
- * All rights reserved. This program and the accompanying materials  are made
- * available under the terms of the Eclipse Public License v1.0 which accompanies this 
- * distribution, and is available at http://www.eclipse.org/legal/epl-v10.html
- * 
+/*******************************************************************************
+ * Copyright (c) 2017,2020 University of Southampton.
+ *
+ * This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License 2.0
+ * which accompanies this distribution, and is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *
  *
  * $Id$
- */
+ *******************************************************************************/
 package ac.soton.eventb.emf.containment.provider;
 
 
@@ -30,9 +33,6 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import org.eventb.emf.core.CorePackage;
 
 import org.eventb.emf.core.provider.AbstractExtensionItemProvider;
@@ -72,32 +72,9 @@ public class ContainmentItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
 			addExtensionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Containment_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Containment_name_feature", "_UI_Containment_type"),
-				 ContainmentPackage.Literals.CONTAINMENT__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -141,7 +118,7 @@ public class ContainmentItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Containment)object).getName();
+		String label = ((Containment)object).getReference();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Containment_type") :
 			getString("_UI_Containment_type") + " " + label;
@@ -157,12 +134,6 @@ public class ContainmentItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Containment.class)) {
-			case ContainmentPackage.CONTAINMENT__NAME:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 
