@@ -18,8 +18,6 @@ import ac.soton.eventb.emf.containment.ContainmentFactory;
 import ac.soton.eventb.emf.containment.ContainmentPackage;
 import ac.soton.eventb.emf.diagrams.DiagramsPackage;
 import org.eclipse.emf.common.util.URI;
-
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -123,17 +121,8 @@ public class ContainmentPackageImpl extends EPackageImpl implements ContainmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getContainment_Name() {
-		return (EAttribute)containmentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getContainment_Extension() {
-		return (EReference)containmentEClass.getEStructuralFeatures().get(1);
+		return (EReference)containmentEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -165,7 +154,6 @@ public class ContainmentPackageImpl extends EPackageImpl implements ContainmentP
 
 		// Create classes and their features
 		containmentEClass = createEClass(CONTAINMENT);
-		createEAttribute(containmentEClass, CONTAINMENT__NAME);
 		createEReference(containmentEClass, CONTAINMENT__EXTENSION);
 	}
 
@@ -205,7 +193,6 @@ public class ContainmentPackageImpl extends EPackageImpl implements ContainmentP
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(containmentEClass, Containment.class, "Containment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getContainment_Name(), ecorePackage.getEString(), "name", "", 1, 1, Containment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContainment_Extension(), theDiagramsPackage.getDiagramOwner(), null, "extension", null, 1, 1, Containment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

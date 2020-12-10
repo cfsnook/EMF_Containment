@@ -4,8 +4,6 @@
     nsPrefix="containment">
   <eClassifiers xsi:type="ecore:EClass" name="Containment" eSuperTypes="../../org.eventb.emf.core/model/eventbcore.ecore#//AbstractExtension">
     <eAnnotations source="org.eventb.emf.core.extendedMetaClasses" references="../../org.eventb.emf.core/model/eventbcore.ecore#//machine/Machine"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extension" lowerBound="1"
         eType="ecore:EClass ../../ac.soton.eventb.emf.diagrams/model/diagrams.ecore#//DiagramOwner"/>
   </eClassifiers>

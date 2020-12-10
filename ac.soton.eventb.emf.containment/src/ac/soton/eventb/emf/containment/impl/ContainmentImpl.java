@@ -32,7 +32,6 @@ import org.eventb.emf.core.impl.AbstractExtensionImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link ac.soton.eventb.emf.containment.impl.ContainmentImpl#getName <em>Name</em>}</li>
  *   <li>{@link ac.soton.eventb.emf.containment.impl.ContainmentImpl#getExtension <em>Extension</em>}</li>
  * </ul>
  * </p>
@@ -40,26 +39,6 @@ import org.eventb.emf.core.impl.AbstractExtensionImpl;
  * @generated
  */
 public class ContainmentImpl extends AbstractExtensionImpl implements Containment {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getExtension() <em>Extension</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -87,27 +66,6 @@ public class ContainmentImpl extends AbstractExtensionImpl implements Containmen
 	@Override
 	protected EClass eStaticClass() {
 		return ContainmentPackage.Literals.CONTAINMENT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContainmentPackage.CONTAINMENT__NAME, oldName, name));
 	}
 
 	/**
@@ -156,8 +114,6 @@ public class ContainmentImpl extends AbstractExtensionImpl implements Containmen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ContainmentPackage.CONTAINMENT__NAME:
-				return getName();
 			case ContainmentPackage.CONTAINMENT__EXTENSION:
 				if (resolve) return getExtension();
 				return basicGetExtension();
@@ -173,9 +129,6 @@ public class ContainmentImpl extends AbstractExtensionImpl implements Containmen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ContainmentPackage.CONTAINMENT__NAME:
-				setName((String)newValue);
-				return;
 			case ContainmentPackage.CONTAINMENT__EXTENSION:
 				setExtension((DiagramOwner)newValue);
 				return;
@@ -191,9 +144,6 @@ public class ContainmentImpl extends AbstractExtensionImpl implements Containmen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ContainmentPackage.CONTAINMENT__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case ContainmentPackage.CONTAINMENT__EXTENSION:
 				setExtension((DiagramOwner)null);
 				return;
@@ -209,28 +159,10 @@ public class ContainmentImpl extends AbstractExtensionImpl implements Containmen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ContainmentPackage.CONTAINMENT__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ContainmentPackage.CONTAINMENT__EXTENSION:
 				return extension != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ContainmentImpl
